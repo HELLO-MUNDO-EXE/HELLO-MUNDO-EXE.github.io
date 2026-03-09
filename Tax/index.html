@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Tax Calculator</title>
+    <script>
+        function calculateTax() {
+            // Purchase amount 
+            var purchaseAmount = parseFloat(document.getElementById('purchaseAmount').value);
+            
+            // Validating input
+            if (isNaN(purchaseAmount) | purchaseAmount < 0) {
+                alert('Please enter a valid positive number for the purchase amount.');
+                return;
+            }
+            
+            // 8.25% / 100
+            var taxRate = 0.0825;
+            var taxAmount = purchaseAmount * taxRate;
+            
+            // Calculate Total
+            var totalAmount = purchaseAmount + taxAmount;
+            
+            // Tax & Total amount
+            document.getElementById('taxAmount').value = taxAmount.toFixed(2);
+            document.getElementById('totalAmount').value = totalAmount.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h2>Tax Calculator</h2>
+    <form>
+        <label for="purchaseAmount">Purchase Amount:</label>
+        <input type="number" id="purchaseAmount" step="0.01" min="0" required><br>
+        
+        <label for="taxAmount">Tax Amount (8.25%):</label>
+        <input type="text" id="taxAmount" disabled><br>
+        
+        <label for="totalAmount">Total Amount:</label>
+        <input type="text" id="totalAmount" disabled><br><br>
+
+        <button type="button" onclick="calculateTax()">Calculate</button><br></br>
+    </form>
+</body>
+</html>
