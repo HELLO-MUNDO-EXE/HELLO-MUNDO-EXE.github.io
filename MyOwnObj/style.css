@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: red;
+    margin-bottom: 30px;
+}
+
+#garage {
+    display: inline;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.car-card {
+    background: black;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+}
+
+.car-card h2 {
+    margin: 15px 0;
+    color: yellow;
+}
+
+.car-card p {
+    margin: 8px 0;
+    font-size: 1.05em;
+}
