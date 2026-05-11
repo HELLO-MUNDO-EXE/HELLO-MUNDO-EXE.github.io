@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>eBay</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- site CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div style="display:flex;align-items:center;gap:16px;width:100%">
+        <div class="logo">eBay</div>
+
+        <!-- Site navigation -->
+        <nav class="primary-nav" aria-label="Main navigation" style="margin-left:6px">
+          <a href="#home" id="nav-home" class="active">Home</a>
+          <a href="#help" id="nav-help">Help</a>
+          <a href="#contact" id="nav-contact">Contact</a>
+          <a href="#terms" id="nav-terms">Terms</a>
+        </nav>
+
+        <div style="flex:1"></div>
+
+        <div class="search" role="search" aria-label="Search eBay">
+          <input id="searchInput" placeholder="Search for anything..." />
+          <button id="searchBtn" aria-label="Search">Search</button>
+        </div>
+
+        <div class="nav-actions" style="margin-left:12px">
+          <button class="btn">Sign in</button>
+          <button class="btn">Cart</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-bottom:40px">
+    <!-- HOME -->
+    <section id="home" class="page active" aria-labelledby="homeTitle">
+      <!-- content (same layout as before) -->
+      <div class="hero">
+        <div class="hero-card">
+          <h1 id="homeTitle" style="margin:0 0 8px">Find great deals on everything</h1>
+          <p style="margin:0;color:var(--muted)">Shop top categories, discover curated picks, and bid on auctions.</p>
+
+          <div class="categories" style="margin-top:18px">
+            <div class="cat" data-cat="electronics">Electronics</div>
+            <div class="cat" data-cat="fashion">Fashion</div>
+            <div class="cat" data-cat="home">Home & Garden</div>
+            <div class="cat" data-cat="collectibles">Collectibles</div>
+            <div class="cat" data-cat="motors">Motors</div>
+          </div>
+
+          <h3 style="margin-top:20px">Popular right now</h3>
+          <div class="popular" id="popularGrid">
+            <div class="card">
+              <img src="https://picsum.photos/seed/1/400/200" alt="item 1">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+                <div>
+                  <div style="font-weight:600">Wireless Headphones</div>
+                  <div style="font-size:13px;color:var(--muted)">Brand refurbished</div>
+                </div>
+                <div class="price">$49.99</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://picsum.photos/seed/2/400/200" alt="item 2">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+                <div>
+                  <div style="font-weight:600">Vintage Camera</div>
+                  <div style="font-size:13px;color:var(--muted)">Collector item</div>
+                </div>
+                <div class="price">$129.00</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://picsum.photos/seed/3/400/200" alt="item 3">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+                <div>
+                  <div style="font-weight:600">Sneakers</div>
+                  <div style="font-size:13px;color:var(--muted)">New with tags</div>
+                </div>
+                <div class="price">$79.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="right-rail">
+          <div class="banner">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-weight:700;font-size:16px">Daily Deals</div>
+                <div style="font-size:13px;opacity:.95">Up to 70% off select items</div>
+              </div>
+              <button class="btn" style="background:rgba(255,255,255,0.12);border:0;color:white">Shop</button>
+            </div>
+          </div>
+
+          <div class="hero-card" style="padding:12px">
+            <div style="font-weight:700;margin-bottom:8px">Trending auctions</div>
+            <div class="carousel" aria-label="Trending auctions">
+              <div class="carousel-track" id="carouselTrack">
+                <div class="small-card">
+                  <img src="https://picsum.photos/seed/a/300/140" alt="" style="height:90px;border-radius:6px;object-fit:cover;margin-bottom:8px">
+                  <div style="font-weight:600">Signed baseball</div>
+                  <div style="color:var(--muted);font-size:13px">Bid: $34</div>
+                </div>
+                <div class="small-card">
+                  <img src="https://picsum.photos/seed/b/300/140" alt="" style="height:90px;border-radius:6px;object-fit:cover;margin-bottom:8px">
+                  <div style="font-weight:600">Classic watch</div>
+                  <div style="color:var(--muted);font-size:13px">Bid: $220</div>
+                </div>
+                <div class="small-card">
+                  <img src="https://picsum.photos/seed/c/300/140" alt="" style="height:90px;border-radius:6px;object-fit:cover;margin-bottom:8px">
+                  <div style="font-weight:600">Comic lot</div>
+                  <div style="color:var(--muted);font-size:13px">Bid: $60</div>
+                </div>
+                <div class="small-card">
+                  <img src="https://picsum.photos/seed/d/300/140" alt="" style="height:90px;border-radius:6px;object-fit:cover;margin-bottom:8px">
+                  <div style="font-weight:600">Laptop</div>
+                  <div style="color:var(--muted);font-size:13px">Bid: $450</div>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:10px">
+              <button class="btn" id="prevBtn">‹</button>
+              <button class="btn" id="nextBtn">›</button>
+            </div>
+          </div>
+
+          <div class="card" style="text-align:center">
+            <div style="font-weight:700">Sell on eBay</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Start listing in minutes</div>
+            <button class="btn" style="margin-top:10px;border:0;background:var(--blue);color:#fff;padding:8px 12px;border-radius:8px">Start selling</button>
+          </div>
+        </aside>
+      </div>
+
+      <section style="margin-top:18px">
+        <h2 style="margin-bottom:10px">Recommended for you</h2>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+          <div class="card">
+            <img src="https://picsum.photos/seed/11/400/250" alt="">
+            <div style="margin-top:8px;font-weight:600">Portable Speaker</div>
+            <div style="color:var(--muted);font-size:13px">Good condition</div>
+            <div class="price" style="margin-top:6px">$29.50</div>
+          </div>
+          <div class="card">
+            <img src="https://picsum.photos/seed/12/400/250" alt="">
+            <div style="margin-top:8px;font-weight:600">Designer Handbag</div>
+            <div style="color:var(--muted);font-size:13px">Pre-owned</div>
+            <div class="price" style="margin-top:6px">$199.00</div>
+          </div>
+          <div class="card">
+            <img src="https://picsum.photos/seed/13/400/250" alt="">
+            <div style="margin-top:8px;font-weight:600">Drone</div>
+            <div style="color:var(--muted);font-size:13px">Like new</div>
+            <div class="price" style="margin-top:6px">$349.00</div>
+          </div>
+          <div class="card">
+            <img src="https://picsum.photos/seed/14/400/250" alt="">
+            <div style="margin-top:8px;font-weight:600">Record Player</div>
+            <div style="color:var(--muted);font-size:13px">Vintage</div>
+            <div class="price" style="margin-top:6px">$89.00</div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- HELP (FAQ) -->
+    <section id="help" class="page" aria-labelledby="helpTitle">
+      <div class="hero-card">
+        <h1 id="helpTitle">Help & FAQ</h1>
+        <p style="color:var(--muted)">Answers to common questions and resources.</p>
+
+        <img src="https://picsum.photos/seed/help/1200/300" alt="Help hero image" class="img-fluid" style="margin-top:12px;border-radius:10px">
+
+        <h3 style="margin-top:18px">Popular Questions</h3>
+        <ul>
+          <li>How do I place a bid?</li>
+          <li>How do I return an item?</li>
+          <li>How does buyer protection work?</li>
+        </ul>
+
+        <h4 style="margin-top:12px">Step-by-step: How to place a bid</h4>
+        <ol>
+          <li>Find the item and open its listing.</li>
+          <li>Read the item description carefully.</li>
+          <li>Enter your bid amount and confirm.</li>
+          <li>Monitor the auction until it ends.</li>
+        </ol>
+
+        <h4 style="margin-top:12px">FAQ Table</h4>
+        <div style="overflow:auto">
+          <table class="table table-striped" aria-label="FAQ table">
+            <thead>
+              <tr><th>Question</th><th>Answer summary</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>How to contact seller?</td><td>Use the "Contact seller" link on the listing page.</td></tr>
+              <tr><td>What if item not as described?</td><td>Open a return request within the return window.</td></tr>
+              <tr><td>Where are my receipts?</td><td>Receipts found in Purchases &gt; Order details.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page" aria-labelledby="contactTitle">
+      <div class="hero-card contact">
+        <h1 id="contactTitle">Contact Us</h1>
+        <p style="color:var(--muted)">Choose a department below or submit a request using the form.</p>
+
+        <img src="https://picsum.photos/seed/contact/1200/250" alt="Contact" class="img-fluid" style="margin-top:12px;border-radius:10px">
+
+        <h4 style="margin-top:14px">Departments & Phone Numbers</h4>
+
+        <!-- Table of random phone numbers (populated by JS) -->
+        <div style="overflow:auto">
+          <table class="table table-bordered" id="deptTable">
+            <thead><tr><th>Department</th><th>Phone</th><th>Hours</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <h4 style="margin-top:12px">Send us a message</h4>
+        <!-- Form elements -->
+        <form id="contactForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input id="name" name="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" type="email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="dept" class="form-label">Department</label>
+            <select id="dept" name="dept" class="form-select">
+              <option>Customer Support</option>
+              <option>Seller Support</option>
+              <option>Payments</option>
+              <option>Legal</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn" style="background:var(--blue);color:#fff;border:0">Submit</button>
+        </form>
+
+        <div id="contactSaved" style="margin-top:12px;color:var(--muted)"></div>
+      </div>
+    </section>
+
+    <!-- TERMS -->
+    <section id="terms" class="page" aria-labelledby="termsTitle">
+      <div class="hero-card">
+        <h1 id="termsTitle">Terms & Legal Disclosures</h1>
+        <p style="color:var(--muted)">Full set of legal disclosures for the mockup site.</p>
+
+        <h4 style="margin-top:12px">1. Acceptance of Terms</h4>
+        <p>By using this site you agree to the mock terms and conditions provided here.</p>
+
+        <h4 style="margin-top:12px">2. Use of site</h4>
+        <ol>
+          <li>Site provided for demonstration purposes only.</li>
+          <li>No real transactions occur via this mockup.</li>
+          <li>Users must follow applicable laws.</li>
+        </ol>
+
+        <h4 style="margin-top:12px">3. Intellectual property</h4>
+        <p>All trademarks and images used in this mockup are for illustrative/demo use only.</p>
+
+        <h4 style="margin-top:12px">4. Disclaimers and limitations</h4>
+        <ul>
+          <li>No warranty: this mock site is provided "as is".</li>
+          <li>Limitations: maintainers are not liable for any damages.</li>
+        </ul>
+
+        <h4 style="margin-top:12px">5. Contact for legal notices</h4>
+        <p>Legal notices can be sent via the Contact page form.</p>
+
+        <h4 style="margin-top:12px">Terms Table</h4>
+        <div style="overflow:auto">
+          <table class="table table-sm">
+            <thead><tr><th>Section</th><th>Summary</th></tr></thead>
+            <tbody>
+              <tr><td>Acceptance</td><td>User consents to mock terms.</td></tr>
+              <tr><td>Warranty</td><td>No warranties provided.</td></tr>
+              <tr><td>Liability</td><td>Maximum limitation applies.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div style="max-width:600px">
+          <div style="font-weight:700;margin-bottom:6px">eBay — mockup</div>
+          <div style="color:var(--muted)">This is a visual mockup for demo purposes.</div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <a href="#help" class="muted">Help</a>
+          <a href="#contact" class="muted">Contact</a>
+          <a href="#terms" class="muted">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- site JS -->
+  <script src="script.js"></script>
+</body>
+</html>
