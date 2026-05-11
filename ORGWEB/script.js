@@ -379,5 +379,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Show 10 random-ish items on load
-  searchAndShowTen("");
+  //searchAndShowTen("");
 });
+
